@@ -1,0 +1,77 @@
+<div class="mbody">
+    <div class="mclass">
+        <section class="mhead">
+        <!-- head -->
+        <div class="top-bar">
+            <div>&nbsp;</div>
+            <div class="col-2">SHOP</div>
+            <div class="col-3"><fa-icon [icon]="faBell"></fa-icon></div>
+        </div>
+        <div class="top-menu">
+            <div class="col-1">
+                <div class="icon-round"></div>
+                <span class="badge-red">Lvl 7</span>
+            </div>
+            <div class="col-2">
+                <span>10,000 points</span>
+            </div>
+            <div class="col-3">
+                <fa-icon class="fa-icon-purple" [icon]="faClock" [style]="{padding: '0 3vw 0 0'}"></fa-icon>
+                <fa-icon class="fa-icon-purple" [icon]="faTrashCan"></fa-icon>
+            </div>
+        </div>
+    </section>
+    <section>
+        <!-- banner -->
+        <swiper class="mySwiper" [config]="config">
+            <ng-template swiperSlide><div class="b-image-container"><img src="assets/wp01.jpg" class="b-image"></div></ng-template>
+            <ng-template swiperSlide><div class="b-image-container"><img src="assets/wp02.jpg" class="b-image"></div></ng-template>
+            <ng-template swiperSlide><div class="b-image-container"><img src="assets/wp03.jpg" class="b-image"></div></ng-template>
+        </swiper>
+    </section>
+  </div>
+  <section>
+      <!-- menu -->
+      <div class="menu">
+          <div 
+            *ngFor="let item of menu; index as i" 
+            [ngClass]="{'active': menuIndex == i}"
+            (click)="clickMenu(i)"
+          >{{item}}</div>
+      </div>
+  </section>
+  <section class="lists-wrapper">
+      <!-- content -->
+      <div class="lists">
+          <div class="list" *ngFor="let product of products; index as i">
+              <div class="item">
+                  <div class="container">
+                      <div class="media-wrapper">
+                          <div class="media">
+                              <div class="desc">Point: {{product.point}}</div>
+                              <div class="image"><img src="{{product.image_url}}" /></div>
+                          </div>
+                      </div>
+                      <div class="content">
+                          <div class="action">
+                              <div class="addcart">Add to Cart <fa-icon class="fa-icon-purple-light" [icon]="faSquarePlus"></fa-icon></div>
+                          </div>
+                          <div class="text">
+                              <div class="title">{{product.subject}}</div>
+                              <div class="description">{{product.desc}}</div>
+                          </div>
+                      </div>
+                      <div class="trans-bg-wrapper">
+                          <div class="trans-bg"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section>
+      <!-- navigation -->
+  </section>
+</div>
+
+<router-outlet></router-outlet>

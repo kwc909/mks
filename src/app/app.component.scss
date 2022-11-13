@@ -1,0 +1,116 @@
+
+
+.mclass{
+    padding-bottom: 3vw; margin-bottom: 4vw;
+    background: radial-gradient(farthest-corner at -20% 80%, #483062 15%, #554eb5 30%, #010427 55%);
+}
+.mySwiper {
+    height: 60vw;
+    .b-image-container{
+        padding: 3vw 4vw;
+        .b-image {
+            width: 100%;
+            border-radius: 2vw;
+        }
+    }
+    ::ng-deep{
+        .swiper-pagination{
+            bottom: 0;
+            .swiper-pagination-bullet{
+                background-color: #acaaaa; opacity: 0.8;
+                &.swiper-pagination-bullet-active{ background-color: #fff;}
+            }
+        }
+    }
+}
+
+.fa-icon-purple{
+    color: #897cc1;
+}
+.fa-icon-purple-light{
+    color: #ffdeff;
+    margin-left:5vw;
+}
+
+.mhead .top-bar{
+    margin-bottom: 3vw;
+    div{
+        display: inline-block; width: 20%; margin-top: 8vw;
+        &.col-2{text-align: center; width: 56%;}
+        &.col-3{text-align: right;}
+    }
+}
+
+.mhead .top-menu {
+    margin-left: 4vw; border-radius: 6vw 0 0 6vw;
+    background-image: linear-gradient(to right, #504bbf, #010427 65%);
+    div{
+        display: inline-block; width: 20%;
+        &.col-1{width: 35%;}
+        &.col-2{width: 40%;}
+        &.col-3{text-align: right;}
+        .icon-round{ 
+            border-radius: 6vw; width: 8vw; height: 8vw; background-color: #fff;vertical-align: middle;
+            background-image: url('../assets/billie.jpg'); background-repeat: no-repeat; background-size: contain;
+            box-shadow: 0 -1vw 3vw 0 rgb(255, 255, 255);
+        }
+        .badge-red{ border-radius: 3vw; background-color: #da4b45; padding: 3px 12px; margin-left: 4vw;}
+    }
+}
+
+.menu{
+    white-space: nowrap; overflow-x: scroll; margin-left: 4vw; padding-bottom: 4vw; font-size: 0.8em;
+    div{
+        background-color: #636363; border-radius: 0.8vw; padding: 2vw 3vw; display: inline-block; margin-right: 2vw;
+        &.active, :hover{background-color: #6255FC;}
+    }
+}
+
+.lists-wrapper{
+    background-image: radial-gradient(farthest-corner at 100% 80%, #757fe0 10%, #010427 90%);
+    position: absolute; z-index: 0; padding-bottom: 18vw;
+
+    .lists {
+        display: flex; flex-wrap: wrap; justify-content: space-between; margin: 4vw;
+        .list{width: 48%;}
+    }
+}
+
+.item .container{
+    margin-bottom: 4vw;
+
+    .media-wrapper{
+        background-image: linear-gradient(#524cc8,#99aee3); color: #000; padding: 0vw 1vw 1vw 0vw; 
+        border-radius: 0 4vw 0 4vw;
+        .media{
+            background-color: #fff; color: #000; padding: 2vw 2vw 8vw 2vw;
+            border-radius: 0 4vw 0 4vw;
+            .desc{margin-bottom: 2vw;}
+            .image{text-align: center; img{width: 50%;}}
+        }
+    }
+
+    .content{
+        margin-bottom: 12vw;
+        .text{
+            margin: 4vw; 
+            .title{font-weight: bold;margin-bottom: 2vw;}
+        }
+        .action{
+            text-align: center; margin: -6vw 0 6vw 0;
+            .addcart{
+                display: inline-block; background-image: linear-gradient(to right, #6c4bda, #9d4dea); 
+                padding: 3vw 5vw; border-radius: 2vw; text-align: center;
+            }
+        }
+    }
+    .trans-bg-wrapper{
+        background-image: linear-gradient(#99aee3,#1e2039); padding: 0vw 0.5vw 0 0.5vw; 
+        border-radius: 0 0 2vw 2vw; z-index: -1; margin-top: -42vw; position: relative;
+        opacity: .7;
+        .trans-bg{
+            background-color: #151623; border-radius: 0 0 2vw 2vw;
+            height: 38vw; opacity: .9;
+        }
+    }
+}
